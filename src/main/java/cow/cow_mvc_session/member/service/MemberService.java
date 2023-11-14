@@ -1,16 +1,20 @@
 package cow.cow_mvc_session.member.service;
 
+import java.util.List;
+
 import cow.cow_mvc_session.member.controller.dto.MemberRequest;
 import cow.cow_mvc_session.member.controller.dto.MemberResponse;
-import cow.cow_mvc_session.member.entity.Member;
 
 public interface MemberService {
 
 	void join(MemberRequest memberRequest);
-	// MemberResponse join(MemberRequest memberRequest);
 
-	Member findOne(Long memberId);
+	MemberResponse findOne(Long memberId);
 
-	// Member updateMember();
+	List<MemberResponse> findAll();
+
+	MemberResponse updateMember(Long memberId, MemberRequest memberRequest);
+
+	void delete(Long memberId);
 }
 

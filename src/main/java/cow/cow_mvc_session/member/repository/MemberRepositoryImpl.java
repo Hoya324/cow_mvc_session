@@ -1,6 +1,8 @@
 package cow.cow_mvc_session.member.repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Repository;
@@ -24,4 +26,12 @@ public class MemberRepositoryImpl implements MemberRepository {
 	public Member findById(Long memberId) {
 		return store.get(memberId);
 	}
+
+	@Override
+	public List<Member> findAll() {
+		return new ArrayList<>(store.values());
+	}
+
+	@Override
+	public void delete(Member member) { store.remove(member.getId()); }
 }
