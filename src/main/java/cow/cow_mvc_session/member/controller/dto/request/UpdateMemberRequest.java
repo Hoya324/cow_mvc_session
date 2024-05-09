@@ -1,4 +1,4 @@
-package cow.cow_mvc_session.member.controller.dto;
+package cow.cow_mvc_session.member.controller.dto.request;
 
 import lombok.Getter;
 

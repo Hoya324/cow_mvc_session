@@ -1,7 +1,9 @@
 package cow.cow_mvc_session.member.repository;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
@@ -21,7 +23,12 @@ public class MemberRepositoryImpl implements MemberRepository {
 	}
 
 	@Override
-	public Member findById(Long memberId) {
-		return store.get(memberId);
+	public Optional<Member> findById(Long memberId) {
+		return Optional.ofNullable(store.get(memberId));
+	}
+
+	@Override
+	public Optional<List<Member>> findAll() {
+		return Optional.of((List<Member>)store.values());
 	}
 }

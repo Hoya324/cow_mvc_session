@@ -1,16 +1,21 @@
 package cow.cow_mvc_session.member.service;
 
-import cow.cow_mvc_session.member.controller.dto.MemberRequest;
-import cow.cow_mvc_session.member.controller.dto.MemberResponse;
-import cow.cow_mvc_session.member.entity.Member;
+import java.util.ArrayList;
+import java.util.List;
+
+import cow.cow_mvc_session.member.controller.dto.request.MemberRequest;
+import cow.cow_mvc_session.member.controller.dto.response.MemberResponse;
 
 public interface MemberService {
 
-	void join(MemberRequest memberRequest);
-	// MemberResponse join(MemberRequest memberRequest);
+	/* 기본 */
+	// void join(MemberRequest memberRequest);
+	// Member findOne(Long memberId);
 
-	Member findOne(Long memberId);
 
-	// Member updateMember();
+	/* MemberResponse dto 적용 */
+	MemberResponse findOne(Long memberId);
+	MemberResponse join(MemberRequest memberRequest);
+	List<MemberResponse> findAll();
 }
 
