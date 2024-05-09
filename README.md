@@ -12,15 +12,17 @@
     - 미션 구현 pr 링크 첨부
 
 ## 환경
-### [spring initializr link](https://start.spring.io/#!type=gradle-project&language=java&platformVersion=3.2.5&packaging=jar&jvmVersion=17&groupId=com.cow&artifactId=cow_mvc_practice&name=cow_mvc_practice&description=cow_mvc_practice&packageName=com.cow.cow_mvc_practice&dependencies=web,data-jpa,lombok)
+### [spring initializr link](https://start.spring.io/#!type=gradle-project&language=java&platformVersion=3.2.5&packaging=jar&jvmVersion=17&groupId=com.cow&artifactId=cow_mvc_session&name=cow_mvc_session&description=cow_mvc_session&packageName=com.cow.cow_mvc_session&dependencies=web,data-jpa,lombok)
 
-## docker 실행 방법
-1. 프로젝트 build 후, 터미널에 `docker build` 를 해당 프로젝트 경로로 입력한다. 
-   - ex) ~/Desktop/mju/cow/cow_mvc_practice docker build
-2. 시작 시에는 `docker compose up` 을 입력한다.
-    - ex) ~/Desktop/mju/cow/cow_mvc_practice docker compose up
-3. 종료 시에는 `docker compose down` 을 입력한다.
-    - ex) ~/Desktop/mju/cow/cow_mvc_practice docker compose down
+## h2 실행 방법
+- https://www.h2database.com/html/download.html
+- 해당 링크에서 운영체제에 맞는 h2 DB를 다운 받습니다.
+- 아래의 블로그를 참조해서 작성해주세요
+  - 단 url은 `jdbc:h2:tcp://localhost/~/cow_mvc_session` 또는 본인의 url를 사용하여 application.yml을 수정해서 사용해주세요
+  - 현재 설정된 username: sa
+  - password은 설정하지 않았습니다.
+- https://velog.io/@piaocanyi/m1-mac-h2-database-%EC%84%A4%EC%B9%98-%EC%8B%A4%ED%96%89
+- https://atoz-develop.tistory.com/entry/H2-Database-%EC%84%A4%EC%B9%98-%EC%84%9C%EB%B2%84-%EC%8B%A4%ED%96%89-%EC%A0%91%EC%86%8D-%EB%B0%A9%EB%B2%95
 
 ## 구현 미션
 
